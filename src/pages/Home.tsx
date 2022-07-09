@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
@@ -41,11 +43,22 @@ const StyledAbout = styled.div`
   }
 `;
 
+ReactGA.initialize("UA-49026829-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 export default function Home() {
   let location = useLocation();
   let pageUrl = `${window.location.origin}${location.pathname}`;
   return (
     <Layout>
+      <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="Fullstack developer, accidental cofounder and manager, living in
+          Miami, Florida. I know what I'm doing 60% of the time."
+        />
+      </Helmet>
       <StyledAbout>
         <img
           srcSet={`${picture} 1x, ${picture2x} 2x`}
