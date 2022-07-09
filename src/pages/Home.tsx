@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
 import Layout from "../components/Layout";
+import SocialIcons from "../components/SocialIcons";
 import picture from "../images/profile-picture.jpg";
 import picture2x from "../images/profile-picture-2x.jpg";
 
@@ -117,6 +118,8 @@ export default function Home() {
           Thanks for visiting! And If you'd like, write something below! "Sign
           my website!!".
         </p>
+
+        <SocialIcons />
 
         <div className="discus-embed">
           <DiscussionEmbed
