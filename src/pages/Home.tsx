@@ -1,4 +1,3 @@
-import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
@@ -14,7 +13,7 @@ const StyledAbout = styled.div`
   align-items: center;
 
   p {
-    text-align: center;
+    text-align: left;
   }
 
   img {
@@ -43,9 +42,6 @@ const StyledAbout = styled.div`
     }
   }
 `;
-
-ReactGA.initialize("UA-49026829-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function Home() {
   let location = useLocation();
