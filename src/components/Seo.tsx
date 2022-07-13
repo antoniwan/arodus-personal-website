@@ -23,15 +23,18 @@ export default function Seo({
     <Helmet>
       <title>{metaTitle}</title>
       <meta name="description" content={metaDescription} />
+      <meta property="og:url" content={window.location.origin} />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:type" content={ogType} />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={`${window.location.origin}`} />
-      <meta property="twitter:title" content={metaTitle} />
-      <meta property="twitter:description" content={metaDescription} />
-      <meta property="twitter:image" content={metaImage} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@antoniwan" />
+      <meta name="twitter:author" content="@antoniwan" />
+      <meta name="twitter:url" content={`${window.location.origin}`} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={metaImage} />
     </Helmet>
   );
 }
