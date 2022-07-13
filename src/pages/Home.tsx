@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import SocialIcons from "../components/SocialIcons";
 import picture from "../images/profile-picture.jpg";
@@ -52,14 +52,7 @@ export default function Home() {
   let pageUrl = `${window.location.origin}${location.pathname}`;
   return (
     <Layout>
-      <Helmet>
-        <title>Home</title>
-        <meta
-          name="description"
-          content="Fullstack developer, accidental cofounder and manager, living in
-          Miami, Florida. I know what I'm doing 60% of the time."
-        />
-      </Helmet>
+      <Seo title="Home" />
       <StyledAbout>
         <img
           srcSet={`${picture} 1x, ${picture2x} 2x`}
