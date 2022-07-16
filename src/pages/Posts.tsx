@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
+import { formatDistance, parseJSON } from "date-fns";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import sanityClient from "../helpers/sanity-client";
@@ -43,17 +44,32 @@ const StyledPage = styled.div`
 `;
 
 const PostLinkout = ({
+  id,
   title,
+  slug,
   createdOn,
   lastUpdateOn,
 }: {
+  id: string;
+  slug: any;
   title: string;
-  createdOn: Date;
-  lastUpdateOn: Date;
+  createdOn: string;
+  lastUpdateOn: string;
 }) => {
+  const todayDate = Date.now();
+  const createdOnDate = parseJSON(createdOn);
+  const updatedOnDate = parseJSON(lastUpdateOn);
+  const created = formatDistance(createdOnDate, todayDate);
+  const updated = formatDistance(updatedOnDate, todayDate);
+  console.log(slug);
   return (
     <div>
-      <h3>{title}</h3>
+      <Link to={`/posts/${slug.current}`}>
+        <h3>{title}</h3>
+      </Link>
+      <p>
+        Created {created}. Last Update {updated}.
+      </p>
     </div>
   );
 };
@@ -93,12 +109,13 @@ export default function Posts({
         {!loading &&
           posts &&
           posts.map((post: any) => {
-            console.log(post);
             return (
               <PostLinkout
                 key={post.title}
                 title={post.title}
-                createdOn={post._createdat}
+                slug={post.slug}
+                id={post._id}
+                createdOn={post._createdAt}
                 lastUpdateOn={post._updatedAt}
               />
             );
