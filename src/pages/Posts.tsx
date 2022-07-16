@@ -42,6 +42,22 @@ const StyledPage = styled.div`
   }
 `;
 
+const PostLinkout = ({
+  title,
+  createdOn,
+  lastUpdateOn,
+}: {
+  title: string;
+  createdOn: Date;
+  lastUpdateOn: Date;
+}) => {
+  return (
+    <div>
+      <h3>{title}</h3>
+    </div>
+  );
+};
+
 export default function Posts({
   colorMode,
   setColorMode,
@@ -51,20 +67,20 @@ export default function Posts({
 }) {
   let location = useLocation();
   let pageUrl = `${window.location.origin}${location.pathname}`;
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const query = `*[_type == "post"]`;
 
   useEffect(() => {
     setLoading(true);
     sanityClient
-      .fetch(`*[_type == "post"] { title, slug }`)
+      .fetch(query)
       .then((data) => {
-        console.log(data);
         setPosts(data);
         setLoading(false);
       })
       .catch(console.error);
-  }, []);
+  }, [query]);
 
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
@@ -74,7 +90,19 @@ export default function Posts({
 
         {loading && <h2>Loading!</h2>}
 
-        {!loading && posts && <h3>POSTS</h3>}
+        {!loading &&
+          posts &&
+          posts.map((post: any) => {
+            console.log(post);
+            return (
+              <PostLinkout
+                key={post.title}
+                title={post.title}
+                createdOn={post._createdat}
+                lastUpdateOn={post._updatedAt}
+              />
+            );
+          })}
 
         <div className="discus-embed">
           <DiscussionEmbed
