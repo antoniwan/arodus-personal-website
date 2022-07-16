@@ -90,7 +90,7 @@ export default function Home() {
           Contributor, Architect, Chief Technology Officer, Engineering Manager,
           and Director to a few teams, projects, and products with various
           levels of effort and impact. Nowadays, I'm enjoying my work as a
-          Technical Product Owner for the digital core technology group in a
+          Technical Program Manager for the digital core technology group in a
           fantastic Global tool and hardware company.
         </p>
 
