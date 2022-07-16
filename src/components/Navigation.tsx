@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import DarkModeToggle from "react-dark-mode-toggle";
 import Skullface from "../components/Skullface";
 import misc from "../libs/misc";
 
@@ -46,10 +48,6 @@ const StyledNavigation = styled.div`
     flex-direction: column;
     justify-content: flex-start;
 
-    button {
-      display: none;
-    }
-
     .mobile-menu {
       display: none;
     }
@@ -60,9 +58,17 @@ const StyledNavigation = styled.div`
 `;
 
 const Navigation = () => {
+  const [isDarkMode, setIsDarkMode] = useState(() => false); // TODO: get value from localStorage
+
+  useEffect(() => {
+    console.log("Are we in Dark mode @ NAVIGATION?", isDarkMode ? "Yes" : "No");
+  }, [isDarkMode]);
+
   return (
     <StyledNavigation>
       <Skullface />
+
+      <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={42} />
     </StyledNavigation>
   );
 };
