@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
+import { PortableText } from "@portabletext/react";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
 import { formatDistance, parseJSON } from "date-fns";
@@ -59,6 +60,7 @@ export default function Post({
 
   const postId: any = postContent === null ? undefined : postContent._id;
   const postTitle: any = postContent === null ? undefined : postContent.title;
+  const postBody: any = postContent === null ? undefined : postContent.body;
 
   useEffect(() => {
     setLoading(true);
@@ -78,6 +80,8 @@ export default function Post({
         {postTitle && <h1>{postTitle}</h1>}
 
         {loading && <h2>Loading!</h2>}
+
+        {postContent && <PortableText value={postBody} />}
 
         <div className="discus-embed">
           <DiscussionEmbed
