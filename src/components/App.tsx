@@ -3,36 +3,35 @@ import ReactGA from "react-ga";
 import { Routes, Route, useLocation } from "react-router-dom";
 import constants from "../constants";
 import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../components/Themes";
 import GlobalStylesheet from "./GlobalStyles";
 import Home from "../pages/Home";
+import { getInitialColorMode } from "../helpers/index";
 
 const { GOOGLE_ANALYTICS_TRACKING_CODE } = constants;
 
 function App() {
-  const location = useLocation();
-  const [isDarkMode] = useState();
   ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_CODE);
+  const location = useLocation();
+  const [colorMode, rawSetColorMode] = useState(getInitialColorMode);
 
-  // TODO: complete dark mode theme switching
-  const theme = {
-    background: "var(--color-white)",
-    text: "var(--color-black)",
+  const setColorMode = (value: string) => {
+    rawSetColorMode(value);
+    window.localStorage.setItem("color-mode", value);
   };
 
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, [location]);
 
-  useEffect(() => {
-    console.log("Are we in Dark mode @ APP?", isDarkMode ? "Yes" : "No");
-  }, [isDarkMode]);
-
   return (
-    <ThemeProvider theme={theme}>
-      {isDarkMode && <h1>Dark Mode is Active</h1>}
+    <ThemeProvider theme={colorMode === "light" ? lightTheme : darkTheme}>
       <GlobalStylesheet />
       <Routes>
-        <Route index element={<Home />} />
+        <Route
+          index
+          element={<Home colorMode={colorMode} setColorMode={setColorMode} />}
+        />
       </Routes>
     </ThemeProvider>
   );

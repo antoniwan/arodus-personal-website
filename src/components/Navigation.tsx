@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
-import DarkModeToggle from "react-dark-mode-toggle";
 import Skullface from "../components/Skullface";
 import misc from "../libs/misc";
 
@@ -16,6 +14,11 @@ const StyledNavigation = styled.div`
 
   button {
     padding: 0;
+    margin: 0;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    font-size: 2rem;
   }
 
   .mobile-menu {
@@ -57,18 +60,23 @@ const StyledNavigation = styled.div`
   }
 `;
 
-const Navigation = () => {
-  const [isDarkMode, setIsDarkMode] = useState(() => false); // TODO: get value from localStorage
-
-  useEffect(() => {
-    console.log("Are we in Dark mode @ NAVIGATION?", isDarkMode ? "Yes" : "No");
-  }, [isDarkMode]);
+const Navigation = ({
+  colorMode,
+  setColorMode,
+}: {
+  colorMode: string;
+  setColorMode: (value: string) => void;
+}) => {
+  const toggleColorMode = () => {
+    setColorMode(colorMode === "light" ? "dark" : "light");
+  };
 
   return (
     <StyledNavigation>
       <Skullface />
-
-      <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={42} />
+      <button onClick={toggleColorMode}>
+        {colorMode !== "light" ? <span>🌞</span> : <span>🌖</span>}
+      </button>
     </StyledNavigation>
   );
 };
