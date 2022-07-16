@@ -43,11 +43,17 @@ const StyledAbout = styled.div`
   }
 `;
 
-export default function Home() {
+export default function Home({
+  colorMode,
+  setColorMode,
+}: {
+  colorMode: string;
+  setColorMode: (value: string) => void;
+}) {
   let location = useLocation();
   let pageUrl = `${window.location.origin}${location.pathname}`;
   return (
-    <Layout>
+    <Layout colorMode={colorMode} setColorMode={setColorMode}>
       <Seo title="Home" />
       <StyledAbout>
         <img

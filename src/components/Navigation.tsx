@@ -14,6 +14,11 @@ const StyledNavigation = styled.div`
 
   button {
     padding: 0;
+    margin: 0;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    font-size: 2.2rem;
   }
 
   .mobile-menu {
@@ -47,7 +52,10 @@ const StyledNavigation = styled.div`
     justify-content: flex-start;
 
     button {
-      display: none;
+      font-size: 3rem;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
     }
 
     .mobile-menu {
@@ -59,10 +67,23 @@ const StyledNavigation = styled.div`
   }
 `;
 
-const Navigation = () => {
+const Navigation = ({
+  colorMode,
+  setColorMode,
+}: {
+  colorMode: string;
+  setColorMode: (value: string) => void;
+}) => {
+  const toggleColorMode = () => {
+    setColorMode(colorMode === "light" ? "dark" : "light");
+  };
+
   return (
     <StyledNavigation>
       <Skullface />
+      <button onClick={toggleColorMode}>
+        {colorMode !== "light" ? <span>🌞</span> : <span>🌖</span>}
+      </button>
     </StyledNavigation>
   );
 };

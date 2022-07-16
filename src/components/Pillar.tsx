@@ -18,10 +18,16 @@ const StyledPillar = styled.section`
   }
 `;
 
-const Pillar = () => {
+const Pillar = ({
+  colorMode,
+  setColorMode,
+}: {
+  colorMode: string;
+  setColorMode: (value: string) => void;
+}) => {
   return (
     <StyledPillar>
-      <Navigation />
+      <Navigation colorMode={colorMode} setColorMode={setColorMode} />
     </StyledPillar>
   );
 };

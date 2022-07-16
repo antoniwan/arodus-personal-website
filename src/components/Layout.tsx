@@ -36,10 +36,18 @@ const StyledLayout = styled.div`
   }
 `;
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({
+  children,
+  colorMode,
+  setColorMode,
+}: {
+  children: React.ReactNode;
+  colorMode: string;
+  setColorMode: (value: string) => void;
+}) => {
   return (
     <StyledLayout>
-      <Pillar />
+      <Pillar colorMode={colorMode} setColorMode={setColorMode} />
 
       <main className="main-body-content">
         <Container>{children}</Container>
