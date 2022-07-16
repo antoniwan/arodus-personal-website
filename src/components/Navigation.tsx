@@ -18,7 +18,7 @@ const StyledNavigation = styled.div`
     background: none;
     border: 0px;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .mobile-menu {
@@ -50,6 +50,13 @@ const StyledNavigation = styled.div`
     height: 100%;
     flex-direction: column;
     justify-content: flex-start;
+
+    button {
+      font-size: 3rem;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
 
     .mobile-menu {
       display: none;

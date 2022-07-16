@@ -45,6 +45,7 @@ const GlobalStylesheet = createGlobalStyle<{
     -moz-osx-font-smoothing: grayscale;
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.text};
+    transition: background-color 0.5s ease;
   }
 
   h1,
