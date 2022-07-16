@@ -8,6 +8,7 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import sanityClient from "../helpers/sanity-client";
 
+// TODO: Crated the StyledPage component
 const StyledPage = styled.div`
   display: flex;
   flex-direction: column;
