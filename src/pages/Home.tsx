@@ -1,47 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
-import styled from "styled-components";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
+import Page from "../components/Page";
 import SocialIcons from "../components/SocialIcons";
 import picture from "../images/profile-picture.jpg";
 import picture2x from "../images/profile-picture-2x.jpg";
-
-const StyledAbout = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    text-align: left;
-  }
-
-  img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    margin-bottom: 5rem;
-    border-radius: 300px;
-    margin-top: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .discus-embed {
-    width: 100%;
-    margin-top: 4rem;
-  }
-
-  @media (min-width: 1024px) {
-    img {
-      margin-top: 0;
-      border-radius: 300px;
-      height: 300px;
-      width: 300px;
-    }
-  }
-`;
 
 export default function Home({
   colorMode,
@@ -55,7 +19,7 @@ export default function Home({
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
       <Seo title="Home" />
-      <StyledAbout>
+      <Page>
         <img
           srcSet={`${picture} 1x, ${picture2x} 2x`}
           alt="Antonio Rodriguez, wearing a pink dress shirt and horn-rimmed glasses, and a smile."
@@ -126,7 +90,7 @@ export default function Home({
             }}
           />
         </div>
-      </StyledAbout>
+      </Page>
     </Layout>
   );
 }

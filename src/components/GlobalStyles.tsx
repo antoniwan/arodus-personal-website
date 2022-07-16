@@ -61,7 +61,8 @@ const GlobalStylesheet = createGlobalStyle<{
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
     line-height: 1.4;
   }
   h2 {

@@ -2,48 +2,11 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 import { PortableText } from "@portabletext/react";
 import { DiscussionEmbed } from "disqus-react";
-import styled from "styled-components";
 import { formatDistance, parseJSON } from "date-fns";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import sanityClient from "../helpers/sanity-client";
-
-// TODO: Crated the StyledPage component
-const StyledPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    text-align: left;
-  }
-
-  img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    margin-bottom: 5rem;
-    border-radius: 300px;
-    margin-top: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .discus-embed {
-    width: 100%;
-    margin-top: 4rem;
-  }
-
-  @media (min-width: 1024px) {
-    img {
-      margin-top: 0;
-      border-radius: 300px;
-      height: 300px;
-      width: 300px;
-    }
-  }
-`;
+import Page from "../components/Page";
 
 export default function Post({
   colorMode,
@@ -77,7 +40,7 @@ export default function Post({
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
       <Seo title={postTitle ? postTitle : ""} />
-      <StyledPage>
+      <Page>
         {postTitle && <h1>{postTitle}</h1>}
 
         {loading && <h2>Loading!</h2>}
@@ -94,7 +57,7 @@ export default function Post({
             }}
           />
         </div>
-      </StyledPage>
+      </Page>
     </Layout>
   );
 }

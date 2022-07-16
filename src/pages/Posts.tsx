@@ -1,47 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
-import styled from "styled-components";
 import { formatDistance, parseJSON } from "date-fns";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
+import Page from "../components/Page";
 import sanityClient from "../helpers/sanity-client";
-
-const StyledPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    text-align: left;
-  }
-
-  img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    margin-bottom: 5rem;
-    border-radius: 300px;
-    margin-top: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .discus-embed {
-    width: 100%;
-    margin-top: 4rem;
-  }
-
-  @media (min-width: 1024px) {
-    img {
-      margin-top: 0;
-      border-radius: 300px;
-      height: 300px;
-      width: 300px;
-    }
-  }
-`;
 
 const PostLinkout = ({
   id,
@@ -61,7 +25,6 @@ const PostLinkout = ({
   const updatedOnDate = parseJSON(lastUpdateOn);
   const created = formatDistance(createdOnDate, todayDate);
   const updated = formatDistance(updatedOnDate, todayDate);
-  console.log(slug);
   return (
     <div>
       <Link to={`/posts/${slug.current}/${id}`}>
@@ -101,8 +64,8 @@ export default function Posts({
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
       <Seo title="Home" />
-      <StyledPage>
-        <h1>My Posts</h1>
+      <Page>
+        <h1>Posts</h1>
 
         {loading && <h2>Loading!</h2>}
 
@@ -131,7 +94,7 @@ export default function Posts({
             }}
           />
         </div>
-      </StyledPage>
+      </Page>
     </Layout>
   );
 }
