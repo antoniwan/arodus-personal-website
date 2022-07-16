@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
 import { formatDistance, parseJSON } from "date-fns";
@@ -43,56 +43,29 @@ const StyledPage = styled.div`
   }
 `;
 
-const PostLinkout = ({
-  id,
-  title,
-  slug,
-  createdOn,
-  lastUpdateOn,
-}: {
-  id: string;
-  slug: any;
-  title: string;
-  createdOn: string;
-  lastUpdateOn: string;
-}) => {
-  const todayDate = Date.now();
-  const createdOnDate = parseJSON(createdOn);
-  const updatedOnDate = parseJSON(lastUpdateOn);
-  const created = formatDistance(createdOnDate, todayDate);
-  const updated = formatDistance(updatedOnDate, todayDate);
-  console.log(slug);
-  return (
-    <div>
-      <Link to={`/posts/${slug.current}/${id}`}>
-        <h3>{title}</h3>
-      </Link>
-      <p>
-        Created {created}. Last Update {updated}.
-      </p>
-    </div>
-  );
-};
-
-export default function Posts({
+export default function Post({
   colorMode,
   setColorMode,
 }: {
   colorMode: string;
   setColorMode: (value: string) => void;
 }) {
+  const { postSlug } = useParams();
   let location = useLocation();
   let pageUrl = `${window.location.origin}${location.pathname}`;
-  const [posts, setPosts] = useState([]);
+  const [postContent, setPostContent] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-  const query = `*[_type == "post"]`;
+  const query = `*[_type == "post" && slug.current=="${postSlug}"]`;
+
+  const postId: any = postContent === null ? undefined : postContent._id;
+  const postTitle: any = postContent === null ? undefined : postContent.title;
 
   useEffect(() => {
     setLoading(true);
     sanityClient
       .fetch(query)
       .then((data) => {
-        setPosts(data);
+        setPostContent(data[0]); // TODO: This seems dirty AF
         setLoading(false);
       })
       .catch(console.error);
@@ -100,34 +73,19 @@ export default function Posts({
 
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
-      <Seo title="Home" />
+      <Seo title={postTitle ? postTitle : ""} />
       <StyledPage>
-        <h1>My Posts</h1>
+        {postTitle && <h1>{postTitle}</h1>}
 
         {loading && <h2>Loading!</h2>}
-
-        {!loading &&
-          posts &&
-          posts.map((post: any) => {
-            return (
-              <PostLinkout
-                key={post.title}
-                title={post.title}
-                slug={post.slug}
-                id={post._id}
-                createdOn={post._createdAt}
-                lastUpdateOn={post._updatedAt}
-              />
-            );
-          })}
 
         <div className="discus-embed">
           <DiscussionEmbed
             shortname="a-bunch-of-ideas"
             config={{
               url: pageUrl,
-              identifier: "posts-comments_001",
-              title: "Posts",
+              identifier: `post-${postId}-comments`,
+              title: `${postTitle}`,
             }}
           />
         </div>

@@ -7,6 +7,7 @@ import { lightTheme, darkTheme } from "../components/Themes";
 import GlobalStylesheet from "./GlobalStyles";
 import Home from "../pages/Home";
 import Posts from "../pages/Posts";
+import Post from "../pages/Post";
 
 import { getInitialColorMode } from "../helpers/index";
 
@@ -37,6 +38,10 @@ function App() {
         <Route
           path="/posts"
           element={<Posts colorMode={colorMode} setColorMode={setColorMode} />}
+        />
+        <Route
+          path="/posts/:postSlug/:postId"
+          element={<Post colorMode={colorMode} setColorMode={setColorMode} />}
         />
       </Routes>
     </ThemeProvider>
