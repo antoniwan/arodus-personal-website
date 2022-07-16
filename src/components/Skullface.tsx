@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import skullface from "../images/arod-icon.png";
 
-const StyledSkullface = styled.h1`
+const StyledSkullface = styled.span`
   color: white;
   text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
   line-height: 1;
