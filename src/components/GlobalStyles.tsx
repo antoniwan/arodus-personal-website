@@ -5,6 +5,7 @@ const GlobalStylesheet = createGlobalStyle<{
 }>`
   :root {
     --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-headings: "Raleway", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --color-black: #232b2b;
@@ -25,7 +26,7 @@ const GlobalStylesheet = createGlobalStyle<{
 
 
   button {
-    font-family: "Open Sans", serif;
+    font-family: var(--font-sans);
   }
 
   body {
@@ -54,7 +55,7 @@ const GlobalStylesheet = createGlobalStyle<{
   h4,
   h5,
   h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: var(--font-headings);
     letter-spacing: 0.5px;
     margin: 0;
     padding: 0;
