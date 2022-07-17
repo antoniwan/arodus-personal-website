@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import styled from "styled-components";
 import { DiscussionEmbed } from "disqus-react";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
@@ -6,6 +7,40 @@ import Page from "../components/Page";
 import SocialIcons from "../components/SocialIcons";
 import picture from "../images/profile-picture.jpg";
 import picture2x from "../images/profile-picture-2x.jpg";
+
+const StyledProfilePicture = styled.div`
+  display: block;
+  position: relative;
+  width: calc(100% + (4rem * 2));
+  height: 250px;
+  left: -4rem;
+  top: -4rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 -15px;
+  }
+
+  @media (min-width: 500px) {
+    position: unset;
+    width: unset;
+    height: unset;
+    left: unset;
+    top: unset;
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: unset;
+      object-position: unset;
+      border-radius: 200px;
+      border: 0px solid var(--color-black);
+      margin-bottom: 2rem;
+    }
+  }
+`;
 
 export default function Home({
   colorMode,
@@ -20,10 +55,13 @@ export default function Home({
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
       <Seo title="Home" />
       <Page>
-        <img
-          srcSet={`${picture} 1x, ${picture2x} 2x`}
-          alt="Antonio Rodriguez, wearing a pink dress shirt and horn-rimmed glasses, and a smile."
-        />
+        <StyledProfilePicture>
+          <img
+            srcSet={`${picture} 1x, ${picture2x} 2x`}
+            alt="Antonio Rodriguez, wearing a pink dress shirt and horn-rimmed glasses, and a smile."
+          />
+        </StyledProfilePicture>
+
         <p>
           Hi, my name is Antonio, and I enjoy building things: web applications,
           software development teams, prototypes, documents, products,
