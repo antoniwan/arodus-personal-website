@@ -13,6 +13,7 @@ const GlobalStylesheet = createGlobalStyle<{
     --color-purple: #903cf0;
     --color-pink: #eb5854;
     --max-container-width: 750px;
+    --color-gray: #494949da;
     --color-light-gray: #cccccc;
     --color-red: #ff4136;
     --color-blue: #0074d9;
@@ -21,12 +22,6 @@ const GlobalStylesheet = createGlobalStyle<{
   ::selection {
     background: var(--color-black);
     color: var(--color-white);
-  }
-
-
-
-  button {
-    font-family: var(--font-sans);
   }
 
   body {
@@ -56,9 +51,9 @@ const GlobalStylesheet = createGlobalStyle<{
   h5,
   h6 {
     font-family: var(--font-headings);
-    letter-spacing: 0.5px;
     margin: 0;
     padding: 0;
+    margin-bottom: 2rem;
   }
 
   h1 {
@@ -67,17 +62,48 @@ const GlobalStylesheet = createGlobalStyle<{
     line-height: 1.4;
   }
   h2 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     line-height: 1.6;
   }
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     line-height: 1.6;
   }
 
   p {
     font-size: 1.6rem;
     line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  ul {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    list-style-type: disc;
+    padding-left: 30px;
+    margin-bottom: 2rem;
+  }
+  ul > li > ul {
+    margin-bottom: 0;
+    list-style-type: circle;
+  }
+  ul > li > ul > li > ul {
+    list-style-type: square;
+  }
+
+  blockquote {
+    quotes: "“" "”" "‘" "’";
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 100;
+    ${({ theme }) => theme.text};
+  }
+  blockquote::before {
+    content: open-quote;
+  }
+  blockquote::after {
+    content: close-quote;
   }
 
   a:link,
@@ -91,27 +117,8 @@ const GlobalStylesheet = createGlobalStyle<{
     transition: color 0.4s ease;
   }
 
-  .box-list {
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .box-list li {
-    list-style-type: disc;
-    line-height: 24px;
-    flex-basis: calc(100% - 25px);
-    margin-left: 25px;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .full-width {
-    margin-left: -2rem;
-    margin-right: -2rem;
+  button {
+    font-family: var(--font-sans);
   }
 
 @keyframes AnimateBGGradient {
@@ -123,38 +130,6 @@ const GlobalStylesheet = createGlobalStyle<{
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-@media (min-width: 520px) {
-  .box-list li {
-    flex-basis: calc(50% - 25px);
-  }
-}
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2.8rem;
-  }
-  h3 {
-    font-size: 2.4rem;
-  }
-  h4 {
-    font-size: 2rem;
-  }
-  .box-list li {
-    flex-basis: calc(33% - 25px);
-  }
-
-  img {
-    object-fit: cover;
-  }
-
-  .full-width {
-    margin-left: calc(-100vw / 2 + calc(var(--max-container-width)) / 2);
-    margin-right: calc(-100vw / 2 + calc(var(--max-container-width)) / 2);
   }
 }
 `;
