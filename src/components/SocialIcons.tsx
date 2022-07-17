@@ -14,23 +14,27 @@ import { GoMail } from "react-icons/go";
 const StyledSocialIcons = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 
   li {
-    font-size: 3rem;
-    padding: 1.5rem;
-    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2.6rem;
+    line-height: 1.6;
+    height: 60px;
+    width: 60px;
   }
 
   @media (min-width: 1024px) {
-    width: 100%;
-
-    li {
-      font-size: 2rem;
-      padding: 1.5rem;
-      padding-bottom: 0;
-    }
   }
 `;
 
