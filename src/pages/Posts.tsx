@@ -84,7 +84,7 @@ export default function Posts({
 
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
-      <Seo title="Home" />
+      <Seo title="Posts" />
       <Page>
         <h1>Posts</h1>
 
