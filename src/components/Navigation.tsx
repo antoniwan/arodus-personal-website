@@ -11,6 +11,7 @@ const StyledNavigation = styled.div`
   height: 60px;
   padding-left: 1rem;
   padding-right: 2rem;
+  z-index: 7;
 
   button.dark-mode-toggle {
     padding: 0;
