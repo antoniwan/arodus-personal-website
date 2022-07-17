@@ -1,44 +1,43 @@
 import { useLocation } from "react-router-dom";
-import { DiscussionEmbed } from "disqus-react";
 import styled from "styled-components";
+import { DiscussionEmbed } from "disqus-react";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
+import Page from "../components/Page";
 import SocialIcons from "../components/SocialIcons";
 import picture from "../images/profile-picture.jpg";
 import picture2x from "../images/profile-picture-2x.jpg";
 
-const StyledAbout = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  p {
-    text-align: left;
-  }
+const StyledProfilePicture = styled.div`
+  display: block;
+  position: relative;
+  width: calc(100% + (4rem * 2));
+  height: 250px;
+  left: -4rem;
+  top: -4rem;
 
   img {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    margin-bottom: 5rem;
-    border-radius: 300px;
-    margin-top: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .discus-embed {
     width: 100%;
-    margin-top: 4rem;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 -15px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 500px) {
+    position: unset;
+    width: unset;
+    height: unset;
+    left: unset;
+    top: unset;
+
     img {
-      margin-top: 0;
-      border-radius: 300px;
-      height: 300px;
-      width: 300px;
+      width: 200px;
+      height: 200px;
+      object-fit: unset;
+      object-position: unset;
+      border-radius: 200px;
+      border: 0px solid var(--color-black);
+      margin-bottom: 2rem;
     }
   }
 `;
@@ -55,11 +54,14 @@ export default function Home({
   return (
     <Layout colorMode={colorMode} setColorMode={setColorMode}>
       <Seo title="Home" />
-      <StyledAbout>
-        <img
-          srcSet={`${picture} 1x, ${picture2x} 2x`}
-          alt="Antonio Rodriguez, wearing a pink dress shirt and horn-rimmed glasses, and a smile."
-        />
+      <Page>
+        <StyledProfilePicture>
+          <img
+            srcSet={`${picture} 1x, ${picture2x} 2x`}
+            alt="Antonio Rodriguez, wearing a pink dress shirt and horn-rimmed glasses, and a smile."
+          />
+        </StyledProfilePicture>
+
         <p>
           Hi, my name is Antonio, and I enjoy building things: web applications,
           software development teams, prototypes, documents, products,
@@ -126,7 +128,7 @@ export default function Home({
             }}
           />
         </div>
-      </StyledAbout>
+      </Page>
     </Layout>
   );
 }

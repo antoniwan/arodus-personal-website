@@ -12,18 +12,10 @@ const StyledLayout = styled.div`
   width: 100%;
   height: 100%;
 
-  p {
-    margin-bottom: 2rem;
-  }
-
-  h2 {
-    margin-bottom: 1rem;
-  }
-
   .main-body-content {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
   }
 
@@ -32,6 +24,7 @@ const StyledLayout = styled.div`
 
     .main-body-content {
       margin-top: 4rem;
+      margin-bottom: 4rem;
     }
   }
 `;

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import { Routes, Route, useLocation } from "react-router-dom";
-import constants from "../constants";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../components/Themes";
+import { lightTheme, darkTheme } from "./Themes";
 import GlobalStylesheet from "./GlobalStyles";
 import Home from "../pages/Home";
+import Posts from "../pages/Posts";
+import Post from "../pages/Post";
 import { getInitialColorMode } from "../helpers/index";
-
-const { GOOGLE_ANALYTICS_TRACKING_CODE } = constants;
+import { GOOGLE_ANALYTICS_TRACKING_CODE } from "../constants";
 
 function App() {
   ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_CODE);
@@ -31,6 +31,14 @@ function App() {
         <Route
           index
           element={<Home colorMode={colorMode} setColorMode={setColorMode} />}
+        />
+        <Route
+          path="/posts"
+          element={<Posts colorMode={colorMode} setColorMode={setColorMode} />}
+        />
+        <Route
+          path="/posts/:postSlug/:postId"
+          element={<Post colorMode={colorMode} setColorMode={setColorMode} />}
         />
       </Routes>
     </ThemeProvider>
