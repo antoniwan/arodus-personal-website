@@ -56,9 +56,6 @@ const Links = () => {
   return (
     <StyledLinks>
       <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
         <Link to="/posts">Posts</Link>
       </li>
     </StyledLinks>

@@ -14,9 +14,10 @@ const GlobalStylesheet = createGlobalStyle<{
     --color-pink: #eb5854;
     --max-container-width: 750px;
     --color-gray: #494949da;
-    --color-light-gray: #cccccc;
+    --color-light-gray: rgb(239, 241, 245);
     --color-red: #ff4136;
     --color-blue: #0074d9;
+    --color-subtle-background: var(--color-light-gray);
   }
 
   ::selection {
