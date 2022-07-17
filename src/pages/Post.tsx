@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { PortableText } from "@portabletext/react";
 import { DiscussionEmbed } from "disqus-react";
-import { formatDistance, parseJSON } from "date-fns";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import sanityClient from "../helpers/sanity-client";
