@@ -8,6 +8,7 @@ import {
   FaCodepen,
   FaLinkedin,
   FaSpotify,
+  FaYoutube,
 } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 
@@ -43,20 +44,11 @@ export default function SocialIcons() {
     <StyledSocialIcons>
       <li>
         <a
-          href="https://twitter.com/antoniwan"
+          href="https://github.com/antoniwan"
           rel="noopener noreferrer"
           target="_blank"
         >
-          <FaTwitter />
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://instagram.com/antoniwan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FaInstagram />
+          <FaGithub />
         </a>
       </li>
       <li>
@@ -70,15 +62,6 @@ export default function SocialIcons() {
       </li>
       <li>
         <a
-          href="https://github.com/antoniwan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FaGithub />
-        </a>
-      </li>
-      <li>
-        <a
           href="https://codepen.io/antoniwan/#"
           rel="noopener noreferrer"
           target="_blank"
@@ -88,11 +71,38 @@ export default function SocialIcons() {
       </li>
       <li>
         <a
+          href="https://youtube.com/antoniwan"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FaYoutube />
+        </a>
+      </li>
+      <li>
+        <a
+          href="http://instagram.com/antoniwan"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FaInstagram />
+        </a>
+      </li>
+      <li>
+        <a
           href="https://www.facebook.com/antoniwan"
           rel="noopener noreferrer"
           target="_blank"
         >
           <FaFacebook />
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://twitter.com/antoniwan"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FaTwitter />
         </a>
       </li>
       <li>
@@ -113,6 +123,7 @@ export default function SocialIcons() {
           <FaSpotify />
         </a>
       </li>
+
       <li>
         <a href="mailto:antonio@builds.software">
           <GoMail />
