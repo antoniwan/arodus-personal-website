@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStylesheet = createGlobalStyle<{
-  theme: { background: "#FFFFFF"; text: "#000000" };
+  theme: { background: "#FFFFFF"; text: "#000000"; links: "#FFFFFF" };
 }>`
   :root {
     --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -111,6 +111,7 @@ const GlobalStylesheet = createGlobalStyle<{
   a:active,
   a:visited {
     color: var(--color-purple);
+    color: ${({ theme }) => theme.links};
     transition: color 1s ease;
   }
   a:hover {

@@ -3,22 +3,26 @@ import styled from "styled-components";
 
 const StyledLinks = styled.ul`
   display: flex;
+  flex-direction: row;
   flex-grow: 1;
   align-items: center;
   justify-content: flex-start;
   margin: 0;
   padding: 0;
   margin-left: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 
   li {
     margin: 0;
+    padding: 0;
     list-style-type: none;
   }
 
   a:link,
   a:active,
   a:visited {
-    display: block;
     padding: 10px;
     color: var(--color-white);
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
@@ -48,6 +52,8 @@ const StyledLinks = styled.ul`
     a:visited {
       font-size: 2rem;
       line-height: 2rem;
+      display: block;
+      text-align: center;
     }
   }
 `;
@@ -56,7 +62,8 @@ const Links = () => {
   return (
     <StyledLinks>
       <li>
-        <Link to="/posts">Posts</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about-me">About Me</Link>
       </li>
     </StyledLinks>
   );

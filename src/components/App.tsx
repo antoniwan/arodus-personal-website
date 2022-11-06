@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./Themes";
 import GlobalStylesheet from "./GlobalStyles";
 import Home from "../pages/Home";
+import About from "../pages/About";
 import Posts from "../pages/Posts";
 import Post from "../pages/Post";
 import { getInitialColorMode } from "../helpers/index";
@@ -31,6 +32,10 @@ function App() {
         <Route
           index
           element={<Home colorMode={colorMode} setColorMode={setColorMode} />}
+        />
+        <Route
+          path="/about-me"
+          element={<About colorMode={colorMode} setColorMode={setColorMode} />}
         />
         <Route
           path="/posts"

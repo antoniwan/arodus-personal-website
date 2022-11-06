@@ -5,13 +5,15 @@ import Links from "./Links";
 const StyledNavigation = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
+  justify-items: center;
   align-items: center;
   align-content: center;
   height: 60px;
   padding-left: 1rem;
   padding-right: 2rem;
   z-index: 7;
+  overflow: hidden;
 
   button.dark-mode-toggle {
     padding: 0;
