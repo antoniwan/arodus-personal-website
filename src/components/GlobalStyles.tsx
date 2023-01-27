@@ -111,7 +111,6 @@ const GlobalStylesheet = createGlobalStyle<{
   a:active,
   a:visited {
     color: var(--color-purple);
-    color: ${({ theme }) => theme.links};
     transition: color 1s ease;
   }
   a:hover {
