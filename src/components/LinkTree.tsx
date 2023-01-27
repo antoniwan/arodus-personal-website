@@ -4,12 +4,6 @@ import styled from "styled-components";
 const StyledLinkTree = styled.ul`
   display: flex;
   flex-direction: column;
-
-  @media (prefers-color-scheme: dark) {
-    a {
-      color: white;
-    }
-  }
 `;
 
 export default function LinkTree() {
