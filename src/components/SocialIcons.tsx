@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import {
   FaFacebook,
-  FaTwitter,
   FaGithub,
   FaInstagram,
-  FaLastfm,
   FaCodepen,
   FaLinkedin,
-  FaSpotify,
-  FaYoutube,
 } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 
