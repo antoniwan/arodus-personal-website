@@ -11,7 +11,7 @@ export default function LinkTree() {
     <StyledLinkTree>
       <li>
         <a
-          href="https://www.linkedin.com/in/antoniwan/"
+          href="https://www.linkedin.com/in/antonioysusoftware/"
           rel="noopener no noreferrer"
           target="_blank"
         >
@@ -29,7 +29,7 @@ export default function LinkTree() {
       </li>
       <li>
         <a
-          href="https://codepen.io/antoniwan/#"
+          href="https://codepen.io/antonio666917/#"
           rel="noopener no noreferrer"
           target="_blank"
         >
