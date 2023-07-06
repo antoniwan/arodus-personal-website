@@ -44,7 +44,7 @@ export default function SocialIcons() {
     <StyledSocialIcons>
       <li>
         <a
-          href="https://github.com/antoniwan"
+          href="https://github.com/antonio666917"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -71,16 +71,7 @@ export default function SocialIcons() {
       </li>
       <li>
         <a
-          href="https://youtube.com/antoniwan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FaYoutube />
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://instagram.com/antoniwan"
+          href="http://instagram.com/antonio666917"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -89,41 +80,13 @@ export default function SocialIcons() {
       </li>
       <li>
         <a
-          href="https://www.facebook.com/antoniwan"
+          href="https://www.facebook.com/antonio666917"
           rel="noopener noreferrer"
           target="_blank"
         >
           <FaFacebook />
         </a>
       </li>
-      <li>
-        <a
-          href="https://twitter.com/antoniwan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FaTwitter />
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://www.last.fm/user/antoniwan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FaLastfm />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://open.spotify.com/user/antoniwan"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <FaSpotify />
-        </a>
-      </li>
-
       <li>
         <a href="mailto:antonio@builds.software">
           <GoMail />
