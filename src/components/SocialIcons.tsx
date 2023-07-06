@@ -49,7 +49,7 @@ export default function SocialIcons() {
       </li>
       <li>
         <a
-          href="www.linkedin.com/in/antonioysusoftware"
+          href="https://www.linkedin.com/in/antonioysusoftware"
           rel="noopener noreferrer"
           target="_blank"
         >
