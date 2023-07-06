@@ -20,7 +20,7 @@ export default function LinkTree() {
       </li>
       <li>
         <a
-          href="https://github.com/antoniwan"
+          href="https://github.com/antonio666917"
           rel="noopener no noreferrer"
           target="_blank"
         >
