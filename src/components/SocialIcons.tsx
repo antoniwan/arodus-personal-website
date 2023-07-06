@@ -62,7 +62,7 @@ export default function SocialIcons() {
       </li>
       <li>
         <a
-          href="https://codepen.io/antoniwan/#"
+          href="https://codepen.io/antonio666917"
           rel="noopener noreferrer"
           target="_blank"
         >
