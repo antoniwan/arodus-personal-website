@@ -14,7 +14,7 @@ export default function Seo({
   const metaTitle = `${title} | Antonio R.`;
   const metaDescription =
     description ||
-    "Software engineering and product leader, enjoyer of modern web technologies. Fullstack developer, accidental cofounder and manager, living in Miami, Florida. I know what I'm doing 60% of the time!";
+    "Software engineering and product leader, enjoyer of modern web technologies. Fullstack developer, accidental co-founder, and manager living in Orlando, Florida. I know what I'm doing 60% of the time!";
   const metaImage = image
     ? `${window.location.origin}/${image}`
     : undefined || `${window.location.origin}/share-image.jpg`;
@@ -28,13 +28,6 @@ export default function Seo({
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:type" content={ogType} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@antoniwan" />
-      <meta name="twitter:author" content="@antoniwan" />
-      <meta name="twitter:url" content={`${window.location.origin}`} />
-      <meta name="twitter:title" content={metaTitle} />
-      <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={metaImage} />
     </Helmet>
   );
 }
