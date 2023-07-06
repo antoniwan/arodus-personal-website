@@ -5,8 +5,8 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
 import SocialIcons from "../components/SocialIcons";
-import picture from "../images/profile-picture.jpg";
-import picture2x from "../images/profile-picture-2x.jpg";
+import picture from "../images/profile-picture-2023.jpg";
+import picture2x from "../images/profile-picture-2023.jpg";
 
 const StyledProfilePicture = styled.div`
   display: block;
