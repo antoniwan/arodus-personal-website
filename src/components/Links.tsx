@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+const StyledExternalLink = styled.div`
+  font-size: 10px;
+  display: inline-block;
+  line-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+`;
 
 const StyledLinks = styled.ul`
   display: flex;
@@ -56,6 +63,11 @@ const StyledLinks = styled.ul`
       text-align: center;
     }
   }
+
+  @media (max-width: 376px) {
+    a:link:first-child { display: none; }
+
+  }
 `;
 
 const Links = () => {
@@ -64,6 +76,7 @@ const Links = () => {
       <li>
         <Link to="/">Home</Link>
         <Link to="/about-me">About Me</Link>
+        <a href="https://wizards666.com/" target="_blank" rel="noopener no noreferrer">Personal Blog <StyledExternalLink><FaExternalLinkAlt /></StyledExternalLink></a>
       </li>
     </StyledLinks>
   );

@@ -6,8 +6,6 @@ import { lightTheme, darkTheme } from "./Themes";
 import GlobalStylesheet from "./GlobalStyles";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Posts from "../pages/Posts";
-import Post from "../pages/Post";
 import { getInitialColorMode } from "../helpers/index";
 import { GOOGLE_ANALYTICS_TRACKING_CODE } from "../constants";
 
@@ -36,14 +34,6 @@ function App() {
         <Route
           path="/about-me"
           element={<About colorMode={colorMode} setColorMode={setColorMode} />}
-        />
-        <Route
-          path="/posts"
-          element={<Posts colorMode={colorMode} setColorMode={setColorMode} />}
-        />
-        <Route
-          path="/posts/:postSlug/:postId"
-          element={<Post colorMode={colorMode} setColorMode={setColorMode} />}
         />
       </Routes>
     </ThemeProvider>
