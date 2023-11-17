@@ -5,8 +5,9 @@ import {
   FaInstagram,
   FaCodepen,
   FaLinkedin,
-} from "react-icons/fa";
-import { GoMail } from "react-icons/go";
+  FaThreads,
+} from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
 
 const StyledSocialIcons = styled.ul`
   display: flex;
@@ -47,6 +48,7 @@ export default function SocialIcons() {
           <FaGithub />
         </a>
       </li>
+
       <li>
         <a
           href="https://www.linkedin.com/in/antonioysusoftware"
@@ -56,6 +58,7 @@ export default function SocialIcons() {
           <FaLinkedin />
         </a>
       </li>
+
       <li>
         <a
           href="https://codepen.io/antonio666917"
@@ -65,27 +68,40 @@ export default function SocialIcons() {
           <FaCodepen />
         </a>
       </li>
+
       <li>
         <a
-          href="http://instagram.com/antonio666917"
+          href="https://www.threads.net/@antoniwan7.0"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FaThreads />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="http://instagram.com/antoniwan7.0"
           rel="noopener noreferrer"
           target="_blank"
         >
           <FaInstagram />
         </a>
       </li>
+
       <li>
         <a
-          href="https://www.facebook.com/antonio666917"
+          href="https://www.facebook.com/antoniwan7.0"
           rel="noopener noreferrer"
           target="_blank"
         >
           <FaFacebook />
         </a>
       </li>
+
       <li>
         <a href="mailto:antonio@builds.software">
-          <GoMail />
+          <IoIosMail />
         </a>
       </li>
     </StyledSocialIcons>

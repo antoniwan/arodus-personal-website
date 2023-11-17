@@ -18,6 +18,7 @@ export default function LinkTree() {
           Work Profile @ LinkedIn
         </a>
       </li>
+
       <li>
         <a
           href="https://github.com/antonio666917"
@@ -27,6 +28,7 @@ export default function LinkTree() {
           GitHub Profile
         </a>
       </li>
+
       <li>
         <a
           href="https://codepen.io/antonio666917/#"
@@ -45,10 +47,12 @@ export default function LinkTree() {
         >
           Contact Me via Email
         </a>
-        <li>
-          <Link to="/about-me">Learn More About Me</Link>
-        </li>
       </li>
+
+      <li>
+        <Link to="/about-me">Learn More About Me</Link>
+      </li>
+
 
       <li>
         <a

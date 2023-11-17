@@ -65,7 +65,7 @@ const StyledLinks = styled.ul`
   }
 
   @media (max-width: 376px) {
-    a:link:first-child { display: none; }
+    li:first-child { display: none; }
 
   }
 `;
@@ -75,10 +75,13 @@ const Links = () => {
     <StyledLinks>
       <li>
         <Link to="/">Home</Link>
-        <Link to="/about-me">About Me</Link>
+      </li>
+      <li>
+        <Link to="/about-me">About Me</Link></li>
+      <li>
         <a href="https://wizards666.com/" target="_blank" rel="noopener no noreferrer">Personal Blog <StyledExternalLink><FaExternalLinkAlt /></StyledExternalLink></a>
       </li>
-    </StyledLinks>
+    </StyledLinks >
   );
 };
 
