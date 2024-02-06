@@ -5,14 +5,14 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
 import SocialIcons from "../components/SocialIcons";
-import picture from "../images/profile-picture-2024.jpeg";
-import picture2x from "../images/profile-picture-2024.jpeg";
+import picture from "../images/profile-picture-2024-2.jpeg";
+import picture2x from "../images/profile-picture-2024-2.jpeg";
 
 const StyledProfilePicture = styled.div`
   display: block;
   position: relative;
   width: calc(100% + (4rem * 2));
-  height: 250px;
+  height: 300px;
   left: -4rem;
   top: -4rem;
 
@@ -20,7 +20,7 @@ const StyledProfilePicture = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0 -15px;
+    object-position: 0 -5px;
   }
 
   @media (min-width: 500px) {

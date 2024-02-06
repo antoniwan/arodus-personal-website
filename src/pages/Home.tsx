@@ -10,7 +10,7 @@ const StyledProfilePicture = styled.div`
   display: block;
   position: relative;
   width: calc(100% + (4rem * 2));
-  height: 250px;
+  height: 300px;
   left: -4rem;
   top: -4rem;
 

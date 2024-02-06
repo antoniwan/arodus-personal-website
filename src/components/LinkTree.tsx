@@ -50,9 +50,11 @@ export default function LinkTree() {
       </li>
 
       <li>
+        <Link to="/projects">See Recent Projects</Link>
+      </li>
+      <li>
         <Link to="/about-me">Learn More About Me</Link>
       </li>
-
 
       <li>
         <a
