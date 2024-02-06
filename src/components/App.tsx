@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from "./Themes";
 import GlobalStylesheet from "./GlobalStyles";
 import Home from "../pages/Home";
 import About from "../pages/About";
+import Projects from "../pages/Projects";
 import { getInitialColorMode } from "../helpers/index";
 import { GOOGLE_ANALYTICS_TRACKING_CODE } from "../constants";
 
@@ -30,6 +31,12 @@ function App() {
         <Route
           index
           element={<Home colorMode={colorMode} setColorMode={setColorMode} />}
+        />
+        <Route
+          path="/projects"
+          element={
+            <Projects colorMode={colorMode} setColorMode={setColorMode} />
+          }
         />
         <Route
           path="/about-me"

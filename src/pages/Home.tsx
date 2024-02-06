@@ -3,8 +3,8 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
 import LinkTree from "../components/LinkTree";
-import picture from "../images/profile-picture-2023.jpg";
-import picture2x from "../images/profile-picture-2023.jpg";
+import picture from "../images/profile-picture-2024.jpeg";
+import picture2x from "../images/profile-picture-2024.jpeg";
 
 const StyledProfilePicture = styled.div`
   display: block;
@@ -60,8 +60,8 @@ export default function Home({
 
         <h1>Antonio R.</h1>
         <p>
-          Technical Program Manager, Software Engineer & Web Developer, Product
-          Leader, Enjoyer of Learning
+          Enjoyer of Learning, Doer, Conscious Person, Parent, Technical Program
+          Manager, Web Developer, Product Leader, Philosopher, Powerful
         </p>
         <LinkTree />
       </Page>

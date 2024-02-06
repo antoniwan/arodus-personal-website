@@ -5,8 +5,8 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
 import SocialIcons from "../components/SocialIcons";
-import picture from "../images/profile-picture-2023.jpg";
-import picture2x from "../images/profile-picture-2023.jpg";
+import picture from "../images/profile-picture-2024.jpeg";
+import picture2x from "../images/profile-picture-2024.jpeg";
 
 const StyledProfilePicture = styled.div`
   display: block;
@@ -42,6 +42,12 @@ const StyledProfilePicture = styled.div`
   }
 `;
 
+const StyledVisuallyHiddenH1 = styled.h1`
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+`;
+
 export default function About({
   colorMode,
   setColorMode,
@@ -62,6 +68,14 @@ export default function About({
           />
         </StyledProfilePicture>
 
+        <StyledVisuallyHiddenH1>
+          Antonio Rodriguez{" "}
+          <span>
+            Enjoyer of Learning, Doer, Conscious Person, Parent, Technical
+            Program Manager, Web Developer, Product Leader, Philosopher,
+            Powerful
+          </span>
+        </StyledVisuallyHiddenH1>
         <p>
           Hi, my name is Antonio, and I enjoy building things: web applications,
           software development teams, prototypes, documents, products,
@@ -106,7 +120,10 @@ export default function About({
           Aside from work, I put most of my efforts into being a conscious and
           present person. I enjoy bringing my family together with home-cooked
           food, weightlifting, playing basketball, reading, and putting in the
-          hours to be a loving, mindful, and involved parent.
+          hours to be a loving, mindful, and involved parent. I also enjoy
+          working on creative projects, writing on my philosophy blog, writing
+          and coding e-books for my daughter and nephew, and, most recently,
+          attempting to record a thrash/death metal album with a close friend.
         </p>
 
         <p>Thanks for visiting! And If you'd like, sign my website below!!</p>

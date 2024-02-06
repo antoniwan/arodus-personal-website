@@ -65,8 +65,9 @@ const StyledLinks = styled.ul`
   }
 
   @media (max-width: 376px) {
-    li:first-child { display: none; }
-
+    li:first-child {
+      display: none;
+    }
   }
 `;
 
@@ -77,11 +78,24 @@ const Links = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/about-me">About Me</Link></li>
-      <li>
-        <a href="https://wizards666.com/" target="_blank" rel="noopener no noreferrer">Personal Blog <StyledExternalLink><FaExternalLinkAlt /></StyledExternalLink></a>
+        <Link to="/projects">Projects</Link>
       </li>
-    </StyledLinks >
+      <li>
+        <Link to="/about-me">About Me</Link>
+      </li>
+      <li>
+        <a
+          href="https://wizards666.com/"
+          target="_blank"
+          rel="noopener no noreferrer"
+        >
+          Blog{" "}
+          <StyledExternalLink>
+            <FaExternalLinkAlt />
+          </StyledExternalLink>
+        </a>
+      </li>
+    </StyledLinks>
   );
 };
 
