@@ -4,10 +4,10 @@ import { DiscussionEmbed } from "disqus-react";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import Page from "../components/Page";
-import Ebook1Picture from "../images/projects/EBook-MiaTheSunTheMoon.jpg";
-import Ebook1Picture2x from "../images/projects/EBook-MiaTheSunTheMoon.jpg";
-import JCPicture from "../images/projects/JCPortfolio.jpg";
-import JCPicture2x from "../images/projects/JCPortfolio.jpg";
+import Ebook1Picture from "../images/projects/EBook-MiaTheSunTheMoon.png";
+import Ebook1Picture2x from "../images/projects/EBook-MiaTheSunTheMoon.png";
+import JCPicture from "../images/projects/JCPortfolio.png";
+import JCPicture2x from "../images/projects/JCPortfolio.png";
 import WordleClonePicture from "../images/projects/WordleClone.png";
 import WordleClonePicture2x from "../images/projects/WordleClone.png";
 
