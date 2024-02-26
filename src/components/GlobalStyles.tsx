@@ -13,7 +13,7 @@ const GlobalStylesheet = createGlobalStyle<{
     --color-purple: #903cf0;
     --color-pink: #eb5854;
     --max-container-width: 750px;
-    --color-gray: #494949da;
+    --color-gray: #494949;
     --color-light-gray: rgb(239, 241, 245);
     --color-red: #ff4136;
     --color-blue: #0074d9;
