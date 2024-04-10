@@ -83,7 +83,7 @@ const Links = () => {
       <li>
         <Link to="/about-me">About Me</Link>
       </li>
-      <li>
+      {/* <li>
         <a
           href="https://wizards666.com/"
           target="_blank"
@@ -94,7 +94,7 @@ const Links = () => {
             <FaExternalLinkAlt />
           </StyledExternalLink>
         </a>
-      </li>
+      </li> */}
     </StyledLinks>
   );
 };
