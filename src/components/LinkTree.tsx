@@ -55,16 +55,6 @@ export default function LinkTree() {
       <li>
         <Link to="/about-me">Learn More About Me</Link>
       </li>
-
-      {/* <li>
-        <a
-          href="https://wizards666.com/"
-          rel="noopener no noreferrer"
-          target="_blank"
-        >
-          Personal Blog
-        </a>
-      </li> */}
     </StyledLinkTree>
   );
 }

@@ -1,12 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { FaExternalLinkAlt } from "react-icons/fa";
-
-const StyledExternalLink = styled.div`
-  font-size: 10px;
-  display: inline-block;
-  line-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-`;
 
 const StyledLinks = styled.ul`
   display: flex;
@@ -83,18 +76,6 @@ const Links = () => {
       <li>
         <Link to="/about-me">About Me</Link>
       </li>
-      {/* <li>
-        <a
-          href="https://wizards666.com/"
-          target="_blank"
-          rel="noopener no noreferrer"
-        >
-          Blog{" "}
-          <StyledExternalLink>
-            <FaExternalLinkAlt />
-          </StyledExternalLink>
-        </a>
-      </li> */}
     </StyledLinks>
   );
 };
