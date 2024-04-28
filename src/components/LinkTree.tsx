@@ -53,8 +53,12 @@ export default function LinkTree() {
         <Link to="/projects">See Recent Projects</Link>
       </li>
       <li>
+        <a href="https://medium.com/@wizards777" target="_blank" rel="noreferrer noopener">Blog (@Medium)</a>
+      </li>
+      <li>
         <Link to="/about-me">Learn More About Me</Link>
       </li>
+      
     </StyledLinkTree>
   );
 }
