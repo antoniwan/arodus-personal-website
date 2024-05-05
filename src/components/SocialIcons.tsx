@@ -6,6 +6,8 @@ import {
   FaCodepen,
   FaLinkedin,
   FaThreads,
+  FaGoodreads,
+  FaMedium,
 } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
@@ -81,6 +83,16 @@ export default function SocialIcons() {
 
       <li>
         <a
+          href="https://wizards777.medium.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FaMedium />
+        </a>
+      </li>
+
+      <li>
+        <a
           href="http://instagram.com/antoniwan7.0"
           rel="noopener noreferrer"
           target="_blank"
@@ -96,6 +108,16 @@ export default function SocialIcons() {
           target="_blank"
         >
           <FaFacebook />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://www.goodreads.com/antoniwan"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FaGoodreads />
         </a>
       </li>
 

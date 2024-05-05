@@ -74,7 +74,13 @@ const Links = () => {
         <Link to="/projects">Projects</Link>
       </li>
       <li>
-        <a href="https://medium.com/@wizards777" target="_blank" rel="noreferrer noopener">Blog (@Medium)</a>
+        <a
+          href="https://medium.com/@wizards777"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Blog (@Medium)
+        </a>
       </li>
       <li>
         <Link to="/about-me">About Me</Link>
