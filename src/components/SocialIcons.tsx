@@ -63,7 +63,7 @@ export default function SocialIcons() {
 
       <li>
         <a
-          href="https://codepen.io/antonio666917"
+          href="https://codepen.io/antoniwan"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -73,7 +73,7 @@ export default function SocialIcons() {
 
       <li>
         <a
-          href="https://www.threads.net/@antoniwan7.0"
+          href="https://www.threads.net/@antoniwan777"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -93,7 +93,7 @@ export default function SocialIcons() {
 
       <li>
         <a
-          href="http://instagram.com/antoniwan7.0"
+          href="http://instagram.com/antoniwan777"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -103,7 +103,7 @@ export default function SocialIcons() {
 
       <li>
         <a
-          href="https://www.facebook.com/antoniwan7.0"
+          href="https://www.facebook.com/antoniwan777"
           rel="noopener noreferrer"
           target="_blank"
         >

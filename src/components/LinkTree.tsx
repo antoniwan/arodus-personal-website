@@ -31,7 +31,7 @@ export default function LinkTree() {
 
       <li>
         <a
-          href="https://codepen.io/antonio666917/#"
+          href="https://codepen.io/antoniwan/#"
           rel="noopener no noreferrer"
           target="_blank"
         >

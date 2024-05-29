@@ -14,7 +14,7 @@ export default function Seo({
   const metaTitle = `${title} | Antonio R.`;
   const metaDescription =
     description ||
-    "Software engineering and product leader, enjoyer of modern web technologies. Fullstack developer, accidental co-founder, and manager living in Orlando, Florida. I know what I'm doing 60% of the time!";
+    "Enjoyer of Learning, Doer, Conscious Person, Parent, Technical Program Manager, Web Developer, Product Leader, Philosopher, Powerful";
   const metaImage = image
     ? `${window.location.origin}/${image}`
     : undefined || `${window.location.origin}/share-image.jpg`;
