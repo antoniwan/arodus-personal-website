@@ -11,7 +11,7 @@ export default function LinkTree() {
     <StyledLinkTree>
       <li>
         <a
-          href="https://www.linkedin.com/in/antonioysusoftware/"
+          href="https://www.linkedin.com/in/antoniwan/"
           rel="noopener no noreferrer"
           target="_blank"
         >
