@@ -43,7 +43,7 @@ export default function SocialIcons() {
     <StyledSocialIcons>
       <li>
         <a
-          href="https://github.com/antonio666917"
+          href="https://github.com/antoniwan"
           rel="noopener noreferrer"
           target="_blank"
         >
